@@ -15,20 +15,23 @@
         <th>Porzioni</th>
         <th>Azioni</th>
     </tr>
+
+    <!-- Loop attraverso le ricette e visualizzale nella tabella -->
     <th:block th:each="ricetta : ${ricette}">
         <tr>
             <td th:text="${ricetta.id}"></td>
             <td th:text="${ricetta.titolo}"></td>
             <td th:text="${ricetta.ingredienti}"></td>
-
+            <td th:text="${ricetta.tempoDiPreparazione}"></td>
+            <td th:text="${ricetta.porzioni}"></td>
+            <td>
+                <a th:href="@{/admin/ricette/modifica/{id}(id=${ricetta.id})}">Modifica</a>
+                <a th:href="@{/admin/ricette/elimina/{id}(id=${ricetta.id})}">Elimina</a>
             </td>
         </tr>
-
-
+    </th:block>
+</table>
 
 <a href="/admin/ricette/nuova">Aggiungi Nuova Ricetta</a>
-
-
-
-</th:block>
-</table>
+</body>
+</html>
