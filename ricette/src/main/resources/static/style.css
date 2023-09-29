@@ -1,11 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Lista delle Ricette</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
-<body>
-     <style>
+
             body {
                 font-family: Arial, sans-serif;
                 margin: 20px;
@@ -39,8 +32,3 @@
                 text-decoration: none;
                 margin-right: 10px;
             }
-        </style>
-    </head>
-    <body>
-</body>
-</html>
