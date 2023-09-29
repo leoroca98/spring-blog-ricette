@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista delle Ricette</title>
+
+</head>
+<body>
+<h1>Lista delle Ricette</h1>
+<div th :each="ricetta : ${ricette}" class="ricetta-card">
+  <h2 th :text="${ricetta.titolo}"></h2>
+  <p th :text="${ricetta.ingredienti}"></p>
+  <img :src="${}" alt="Immagine della ricetta" th>
+  <p><strong>Tempo di Preparazione:</strong> <span th :text="${ricetta.tempoDiPreparazione}"></span> minuti</p>
+  <p><strong>Porzioni:</strong> <span th :text="${ricetta.porzioni}"></span></p>
+  <a th :href="@{/admin/ricette/modifica/{id}(id=${ricetta.id})}">Modifica</a>
+  <a th :href="@{/admin/ricette/elimina/{id}(id=${ricetta.id})}">Elimina</a>
+</div>
+
+<a href="/admin/ricette/nuova">Aggiungi Nuova Ricetta</a>
+</body>
+</html>
